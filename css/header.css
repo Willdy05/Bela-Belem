@@ -1,0 +1,36 @@
+#main-header.hidden {
+    transform: translateY(-100%); /* Esconder o header */
+}
+
+#main-header a {
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1.2rem; /* Aumentar o tamanho da fonte */
+    font-weight: bold; /* Tornar o texto em negrito */
+    color: #ffffff; /* Definir uma cor para o texto */
+    display: flex; /* Garantir que o link e a logo fiquem lado a lado */
+    align-items: center; /* Alinhar verticalmente o texto e a logo */
+    gap: 10px; /* Espaçamento entre a logo e o texto */
+    margin-top: 10px; /* Adicionar espaçamento superior */
+    margin-bottom: 10px; /* Adicionar espaçamento inferior */
+}
+
+#main-header {
+    position: fixed; /* Fixar o header no topo da tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garantir que o header fique acima de outros elementos */
+    transition: transform 0.3s ease-in-out;
+    display: flex; /* Ativar o Flexbox */
+    align-items: center; /* Alinhar verticalmente os itens */
+    padding: 0 20px; /* Adicionar espaçamento interno */
+}
+
+#main-header .logo {
+    display: flex; /* Garantir que a logo e o título fiquem lado a lado */
+    align-items: center; /* Alinhar verticalmente a imagem e o título */
+}
+
+#main-header .logo img {
+    margin-right: 10px; /* Espaçamento entre a imagem e o título */
+}

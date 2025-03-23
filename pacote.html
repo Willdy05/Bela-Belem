@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Pacote</title>
+    <link rel="stylesheet" href="/css/pacotes.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main>
+        <!-- Macro imagem -->
+        <section id="macro-imagem">
+            <!-- Não está errado -->
+            <img id="imagem-pacote" src="" alt="Imagem do pacote">
+        </section>
+
+        <!-- Conteúdo principal -->
+        <section id="conteudo-pacote">
+            <!-- Lado esquerdo -->
+            <div id="lado-esquerdo">
+                <h1 id="titulo-pacote"></h1>
+                <p><strong>Preço e Horas:</strong> <span id="preco1-pacote"></span></p>
+                <p id="descricao-pacote"></p>
+                <h3>O que está incluso:</h3>
+                <ul id="contem-pacote"></ul>
+                <h3>O que não está incluso:</h3>
+                <ul id="nao-contem-pacote"></ul>
+            </div>
+
+            <!-- Lado direito -->
+            <div id="lado-direito">
+                <div id="carrossel">
+                    <div class="imagens-carrossel">
+                        <!-- As imagens adicionais serão carregadas dinamicamente -->
+                    </div>
+                </div>
+                <h3>Detalhes:</h3>
+                <p><strong>Duração:</strong> <span id="duracao-pacote"></span></p>
+                <p id="atencao-pacote"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/scripts.js"></script>
+    <script src="../js/data.js"></script>
+    <script>
+
+        // Carrega o cabeçalho
+        fetch('includes/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Erro ao carregar o header: ${response.status} ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+
+                // Aguarda o carregamento do DOM antes de executar as funções
+                document.addEventListener('DOMContentLoaded', () => {
+                    if (typeof setupMenuToggle === 'function') {
+                        setupMenuToggle();
+                    } else {
+                        console.error('setupMenuToggle não está definido.');
+                    }
+
+                    if (typeof setupModal === 'function') {
+                        setupModal();
+                    } else {
+                        console.error('setupModal não está definido.');
+                    }
+                });
+
+                // Adiciona o comportamento de esconder/mostrar o header
+                let lastScrollY = window.scrollY;
+                const header = document.getElementById('main-header');
+                let isScrolling;
+
+                window.addEventListener('scroll', () => {
+                    clearTimeout(isScrolling);
+
+                    isScrolling = setTimeout(() => {
+                        if (window.scrollY > lastScrollY) {
+                            header.classList.add('hidden');
+                        } else {
+                            header.classList.remove('hidden');
+                        }
+                        lastScrollY = window.scrollY;
+                    }, 100);
+                });
+            })
+            .catch(error => {
+                console.error(error);
+                document.getElementById('header').innerHTML = '<p>Erro ao carregar o cabeçalho.</p>';
+            });
+
+
+        // Carregar dados do pacote
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const pacoteId = urlParams.get("pacote");
+
+            if (pacoteId && pacotes[pacoteId]) {
+                carregarPacote(pacoteId);
+
+                // Adicionar imagens ao carrossel
+                const pacote = pacotes[pacoteId];
+                const carrossel = document.querySelector(".imagens-carrossel");
+                pacote.imagem.forEach(img => {
+                    const imgElement = document.createElement("img");
+                    imgElement.src = img;
+                    imgElement.alt = pacote.titulo;
+                    carrossel.appendChild(imgElement);
+                });
+            } else {
+                document.getElementById("conteudo-pacote").innerHTML = "<p>Pacote não encontrado.</p>";
+            }
+        });
+    </script>
+</body>
+
+</html>

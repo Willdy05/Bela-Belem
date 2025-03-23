@@ -1,0 +1,57 @@
+<header id="main-header">
+    <link rel="stylesheet" href="/css/header.css">
+    <div class="main-header">
+        <div class="logo">
+            <a href="/index.html">
+                <img src="/assets/icone.png" alt="Logo Bela Belém" class="logo-img">
+                Bela Belém
+            </a>
+        </div>
+    </div>
+    
+    <!-- Botão de menu hambúrguer, aparece em telas menores -->
+    <button class="menu-toggle" aria-label="Abrir menu">
+        <span class="hamburger"></span>
+    </button>
+
+    <!-- Menu de navegação -->
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="/pacotes/pacote.html">Pacotes</a></li>
+            <li><a href="#contato" class="abrir-modal">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Modal de contatos -->
+    <div id="modal-contato" class="modal">
+        <div class="modal-conteudo">
+            <button class="fechar-modal" aria-label="Fechar modal">&times;</button>
+            <h2 id="modal-titulo">Entre em Contato</h2>
+            <div class="info-contato">
+                <a href="https://www.instagram.com/belabelemturismo" target="_blank" rel="noopener noreferrer" class="btn">
+                    <img src="assets/instagram-logo.png" alt="Instagram" class="icone"> @belabelemturismo
+                </a>
+                <a href="https://wa.me/5591980606922" target="_blank" rel="noopener noreferrer" class="btn">
+                    <img src="assets/whatsapp-logo.png" alt="Whatsapp" class="icone"> +55 (91) 98060-6922
+                </a>
+                <a href="mailto:belabelemturismo@gmail.com" class="btn">
+                    <img src="assets/email_icon.png" alt="E-mail" class="icone"> belabelemturismo@gmail.com
+                </a>
+            </div>
+            <form action="https://formspree.io/f/seu-id-aqui" method="POST" class="form-contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required minlength="2">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required minlength="10"></textarea>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+</header>

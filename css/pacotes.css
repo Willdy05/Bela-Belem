@@ -1,0 +1,63 @@
+/* Macro imagem */
+#macro-imagem img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Layout principal */
+#conteudo-pacote {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#lado-esquerdo, #lado-direito {
+    flex: 1;
+}
+
+#lado-esquerdo {
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+
+#lado-direito {
+    padding-left: 20px;
+}
+
+/* Carrossel */
+#carrossel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.imagens-carrossel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.imagens-carrossel img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #conteudo-pacote {
+        flex-direction: column;
+    }
+
+    #lado-esquerdo, #lado-direito {
+        padding: 0;
+        border: none;
+    }
+}

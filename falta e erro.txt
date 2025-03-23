@@ -1,0 +1,13 @@
+#Falta:
+HTML sobre
+Tradução altomatica do site
+Adicionar preços dos pacotes no index
+Adicionar footer ao pacote.html
+Estilizar mais o pacote.css, no estilo da imagem "exemplo", em /assets
+Baixar imagens de passeio
+Criar o carrossel de imagens, para mostrar sequencialmente as imagens da const "imagem"
+keywords - O chefe vai mandar isso ainda
+
+#Erros:
+O Nav-menu fica sempre visivel quando a tela está muito pequena
+Nav-menu não funciona quando está no pacote.html
