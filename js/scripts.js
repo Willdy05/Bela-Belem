@@ -4,14 +4,15 @@ function setupMenuToggle() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-    } else {
-        console.error('Menu toggle or nav menu not found in the DOM.');
+    if (!menuToggle || !navMenu) {
+        console.warn('setupMenuToggle: .menu-toggle or .nav-menu not found in the DOM. Skipping menu toggle setup.');
+        return; // Exit early if elements are not found
     }
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
 }
 
 // Função para configurar o modal
@@ -64,6 +65,18 @@ function closeModal() {
     }, 300);
 }
 
+// Função para configurar atributos de autocomplete nos campos de formulário
+function setupAutocomplete() {
+    const formFields = document.querySelectorAll('input[id], input[name], textarea[id], textarea[name]');
+
+    formFields.forEach((field) => {
+        if (!field.hasAttribute('autocomplete')) {
+            field.setAttribute('autocomplete', 'off'); // Define um valor padrão
+            console.warn(`Autocomplete attribute added to field with id/name: ${field.id || field.name}`);
+        }
+    });
+}
+
 // Função principal para carregar o script
 // Esta função é executada quando o DOM é carregado e inicializa as funções de alternância do menu e configuração do modal.
 document.addEventListener('DOMContentLoaded', () => {
@@ -73,4 +86,5 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Alternador de menu ou menu de navegação não encontrado no DOM. Ignorando setupMenuToggle.');
     }
     setupModal();
+    setupAutocomplete();
 });

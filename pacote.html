@@ -51,7 +51,6 @@
     <script src="../js/scripts.js"></script>
     <script src="../js/data.js"></script>
     <script>
-
         // Carrega o cabeçalho
         fetch('includes/header.html')
             .then(response => {
@@ -64,19 +63,17 @@
                 document.getElementById('header').innerHTML = data;
 
                 // Aguarda o carregamento do DOM antes de executar as funções
-                document.addEventListener('DOMContentLoaded', () => {
-                    if (typeof setupMenuToggle === 'function') {
-                        setupMenuToggle();
-                    } else {
-                        console.error('setupMenuToggle não está definido.');
-                    }
+                if (typeof setupMenuToggle === 'function') {
+                    setupMenuToggle();
+                } else {
+                    console.error('setupMenuToggle não está definido.');
+                }
 
-                    if (typeof setupModal === 'function') {
-                        setupModal();
-                    } else {
-                        console.error('setupModal não está definido.');
-                    }
-                });
+                if (typeof setupModal === 'function') {
+                    setupModal();
+                } else {
+                    console.error('setupModal não está definido.');
+                }
 
                 // Adiciona o comportamento de esconder/mostrar o header
                 let lastScrollY = window.scrollY;
@@ -100,7 +97,6 @@
                 console.error(error);
                 document.getElementById('header').innerHTML = '<p>Erro ao carregar o cabeçalho.</p>';
             });
-
 
         // Carregar dados do pacote
         document.addEventListener("DOMContentLoaded", function () {

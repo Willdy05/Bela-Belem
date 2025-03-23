@@ -10,4 +10,3 @@ keywords - O chefe vai mandar isso ainda
 
 #Erros:
 O Nav-menu fica sempre visivel quando a tela está muito pequena
-Nav-menu não funciona quando está no pacote.html
