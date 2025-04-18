@@ -1,0 +1,21 @@
+{
+  "name": "bela_belem",
+  "version": "1.0.0",
+  "description": "\"# Bela-Belem\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Willdy05/Bela-Belem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Willdy05/Bela-Belem/issues"
+  },
+  "homepage": "https://github.com/Willdy05/Bela-Belem#readme"
+}
