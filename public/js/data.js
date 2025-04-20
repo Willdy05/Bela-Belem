@@ -1,3 +1,6 @@
+// Garantir que pacotes exista mesmo se não houver dados
+window.pacotes = window.pacotes || {};
+
 // Conteudos dos pacotes de passeio
 const pacotes = {
     ajuruteua: {
@@ -149,7 +152,7 @@ const pacotes = {
         duracao: "Até 12 horas de passeio",
         descricao: "A BBOT fará seu receptivo turístico no seu hotel em horário combinado.  Seguiremos por via rodoviária para a Praia do Atalaia em Salinas – principal point turístico do estado do Pará. Viajaremos por pouco mais de 210 KM no sentido da grande região nordeste do Pará, dotadas de praias com formas diferentes de tudo que você já viu. No Atalaia desfrutaremos um dia espetacular em um lugar único. Em seguida visitaremos a praia do Maçarico na cidade de Salinópolis.",
         des_resumida: "Conhecida como o Caribe Paraense, Salinas é famosa por suas praias de águas claras e vida noturna animada. Um destino perfeito para relaxar e se divertir.",
-        imagem: ["/public/assets/salinas/salinas1.jpg", "../public/assets/salinas/salinas2.jpg", "../public/assets/salinas/salinas3.jpg", "../public/assets/salinas/salinas4.jpg"],
+        imagem: ["/public/assets/passeio/salinas/salinas1.jpg", "/public/assets/passeio/salinas/salinas2.jpg", "/public/assets/passeio/salinas/salinas3.jpg", "/public/assets/passeio/salinas/salinas4.jpg"],
         contem: ["receptivo hoteleiro", "TODOS os traslados e serviços de Guia Turístico"],
         nao_contem: ["INGRESSOS DE NENHUMA ESPÉCIE", "ALIMENTAÇÃO E BEBIDA"],
         atencao: ""
@@ -172,6 +175,7 @@ const pacotes = {
 
 // Função para carregar dados da pagina
 function carregarPacote(pacoteId) {
+    if (!pacotes[pacoteId]) return;
     const pacote = pacotes[pacoteId];
 
     const tituloPacote = document.getElementById("titulo-pacote");
