@@ -1,138 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bela Belém - Turismo em Belém e Pará</title>
-        <meta name="description"
-            content="Descubra os encantos de Belém do Pará com a Bela Belém. Oferecemos passeios incríveis e guias especializados em inglês e francês.">
-        <meta name="keywords"
-            content="Belém, Pará, turismo, passeios, Ajuruteua, Ilha do Marajó, Mosqueiro, Salinas">
-        <meta name="author" content="Bela Belém">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    </head>
-
-    <body>
-        <div id="header"></div>
-
-        <main>
-            <section id="destaque">
-                <h2>Bem-vindo a Belém do Pará!</h2>
-                <p>Descubra os encantos da capital paraense. Contamos com um
-                    guia especializado que fala inglês e francês
-                    para proporcionar uma experiência ainda mais completa aos
-                    nossos clientes.</p>
-            </section>
-
-            <!-- Os card são exibidos aqui -->
-            <section id="destaques-turisticos">
-                <h2>Principais Destinos</h2>
-                <div class="grade-destinos" id="container-pacotes"></div>
-            </section>
-
-            <section>
-                <p>Descubra o Paraíso do Pará e Viva Experiências Inesquecíveis.
-                    Imagine-se caminhando pelas areias brancas de Salinas,
-                    sentindo o vento suave enquanto o sol se põe no
-                    horizonte. Ou navegando pelos rios encantados da Amazônia,
-                    onde o boto cor-de-rosa surge para tornar seu
-                    momento ainda mais mágico. E que tal explorar a fascinante
-                    cultura de Belém em um city tour que revela a
-                    alma desta cidade rica em história e sabores?
-                    Esses não são apenas passeios, são memórias que você levará
-                    para a vida toda. Deixe-se envolver pela
-                    grandiosidade da Ilha de Marajó, com sua natureza
-                    exuberante, ou relaxe nas águas tranquilas da Ilha do
-                    Mosqueiro. Cada experiência é cuidadosamente desenhada para
-                    que você viva o melhor do Pará de forma
-                    única e inesquecível.
-                    Reserve agora e transforme sua viagem em uma jornada
-                    inesquecível. Momentos como esses não esperam —
-                    seja o protagonista da sua própria aventura!</p>
-            </section>
-        </main>
-
-        <!-- Cabeçalhor, roda pé e card, respectivamente-->
-        <script src="js/scripts.js"></script>
-        <div id="footer"></div>
-        <script src="js/data.js"></script>
-
-        <script>
-        // Carrega o cabeçalho
-        fetch('includes/header.html')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Erro ao carregar o header: ${response.status} ${response.statusText}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-
-                // Reexecuta o setupMenuToggle após o header ser carregado
-                setupMenuToggle();
-                setupModal();
-
-                // Adiciona o comportamento de esconder/mostrar o header
-                let lastScrollY = window.scrollY;
-                const header = document.getElementById('main-header');
-                let isScrolling;
-
-                window.addEventListener('scroll', () => {
-                    clearTimeout(isScrolling);
-
-                    isScrolling = setTimeout(() => {
-                        if (window.scrollY > lastScrollY) {
-                            header.classList.add('hidden');
-                        } else {
-                            header.classList.remove('hidden');
-                        }
-                        lastScrollY = window.scrollY;
-                    }, 100);
-                });
-            })
-            .catch(error => {
-                console.error(error);
-                document.getElementById('header').innerHTML = '<p>Erro ao carregar o cabeçalho.</p>';
-            });
-
-        // Carrega o rodapé
-        fetch('includes/footer.html')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Erro ao carregar o footer: ${response.status} ${response.statusText}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            })
-            .catch(error => {
-                console.error(error);
-                document.getElementById('footer').innerHTML = '<p>Erro ao carregar o rodapé.</p>';
-            });
-
-        // Cria os cards dos pacotes
-        document.addEventListener("DOMContentLoaded", function () {
-            const container = document.getElementById('container-pacotes');
-            for (const [pacoteId, pacote] of Object.entries(pacotes)) {
-                const card = `
-            <div class="destino">
-                <h3>${pacote.titulo}</h3>
-                <img src="${pacote.imagem[0]}" alt="${pacote.titulo}" loading="lazy">
-                <p>${pacote.des_resumida}</p>
-                <a href="pacotes/pacote.html?pacote=${pacoteId}" class="btn" aria-label="Saiba mais sobre ${pacote.titulo}">
-                    Saiba Mais
-                </a>
-            </div>
-        `;
-                container.insertAdjacentHTML('beforeend', card);
-            }
-        });
-    </script>
-
-    </body>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bela Belém</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bem-vindo ao Bela Belém</h1>
+  <p>Seu site está funcionando!</p>
+  <script src="script.js"></script>
+</body>
 </html>
