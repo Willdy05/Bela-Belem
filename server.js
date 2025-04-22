@@ -7,8 +7,13 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Define rota para todas as páginas HTML
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Rotas adicionais (ajuste conforme necessário)
+app.get('/sobre', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'sobre.html'));
 });
 
 // Inicia o servidor
