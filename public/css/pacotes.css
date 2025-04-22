@@ -62,6 +62,21 @@
 .anterior { left: 10px; }
 .proximo { right: 10px; }
 
+.reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px; /* Ajuste o tamanho máximo da imagem */
+    max-height: 150px; /* Ajuste o tamanho máximo da imagem */
+    overflow: hidden;
+}
+
+.reserva img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Garante que a imagem seja ajustada proporcionalmente */
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     #conteudo-pacote {

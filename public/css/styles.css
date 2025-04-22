@@ -7,25 +7,55 @@
 
 /* Definição de cores principais usadas no site */
 :root {
-    --laranja: #ff8814; /* Cor principal laranja */
-    --laranja-claro: #ffa347; /* Versão clara do laranja */
-    --laranja-escuro: #cc6d10; /* Versão escura do laranja */
-    --branco: #ffffff; /* Branco */
-    --cinza-claro: #f4f4f4; /* Cinza claro */
-    --cinza-medio: #ddd; /* Cinza médio */
-    --cinza-escuro: #555; /* Cinza escuro */
-    --preto: #333; /* Preto */
-    --cinza: #363636; /* Cinza neutro */
-    --azul: #0b2a6b; /* Azul */
+    --laranja: #FF6B00; /* Laranja mais vibrante */
+    --laranja-claro: #FF944D;
+    --laranja-escuro: #CC5200;
+    --destaque: #FFD700; /* Amarelo para destaques */
 }
 
 /* Estilos gerais para o corpo da página */
 body {
-    font-family: 'Roboto', sans-serif; /* Fonte principal */
+    font-family: 'Poppins', sans-serif; /* Fonte principal */
     line-height: 1.6; /* Altura da linha */
     background-color: var(--branco); /* Fundo branco */
     color: var(--cinza-escuro); /* Texto cinza escuro */
     font-size: 16px; /* Tamanho base da fonte */
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+/* Definição de cores adicionais */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif; /* Fonte para títulos */
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient rgba(0,0,0,0.5), url('assets/bg-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 1rem;
 }
 
 /* Estilização do cabeçalho fixo */
@@ -159,6 +189,19 @@ header h1 {
     outline-offset: 2px; /* Distância do contorno */
 }
 
+.btn-destaque {
+    background: var(--laranja);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: transform 0.3s;
+}
+
+.btn-destaque:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,107,0,0.4);
+}
+
 /* Estilo do menu de navegação */
 .nav-menu ul {
     list-style: none; /* Remove marcadores */
@@ -238,13 +281,29 @@ section {
     object-fit: cover; /* Ajusta a imagem */
     border-radius: 5px; /* Bordas arredondadas */
     margin-bottom: 10px; /* Espaçamento inferior */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Efeito de destaque para o destino mais vendido */
+.destino::before {
+    content: "Mais Vendido";
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    background: var(--destaque);
+    color: var(--preto);
+    padding: 5px 30px;
+    transform: rotate(45deg);
+    font-weight: bold;
+    z-index: 1;
 }
 
 /* Efeito de hover nas imagens dos destinos */
 .destino img:hover {
-    transform: scale(1.05); /* Aumenta o tamanho */
-    box-shadow: 0 4px 8px var(--cinza-escuro); /* Sombra mais intensa */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* Estilo dos títulos dos destinos */
@@ -390,6 +449,29 @@ footer a:hover {
 /* Hover no botão do formulário */
 .form-contato button:hover {
     background-color: var(--laranja-escuro); /* Fundo laranja escuro */
+}
+
+/* Seções */
+.section-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--preto);
+    margin-bottom: 1rem;
+}
+
+.bg-cinza-claro {
+    background: var(--cinza-claro);
+    padding: 4rem 0;
 }
 
 /* Estilos responsivos para telas menores */
