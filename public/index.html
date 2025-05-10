@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bela Belém - Turismo em Belém e Pará</title>
-        <meta name="description"
-            content="Descubra os encantos de Belém do Pará com a Bela Belém. Oferecemos passeios incríveis e guias especializados em inglês e francês.">
-        <meta name="keywords"
-            content="Belém, Pará, turismo, passeios, Ajuruteua, Ilha do Marajó, Mosqueiro, Salinas">
-        <meta name="author" content="Bela Belém">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bela Belém - Turismo em Belém e Pará</title>
+    <meta name="description"
+        content="Descubra os encantos de Belém do Pará com a Bela Belém. Oferecemos passeios incríveis e guias especializados em inglês e francês.">
+    <meta name="keywords" content="Belém, Pará, turismo, passeios, Ajuruteua, Ilha do Marajó, Mosqueiro, Salinas">
+    <meta name="author" content="Bela Belém">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
 
-    <body>
-        <div id="header"></div>
+<body>
+    <div id="header"></div>
 
-        <main>
-            <section id="destaque">
-                <h2>Bem-vindo a Belém do Pará!</h2>
-                <p>Descubra os encantos da capital paraense. Contamos com um
-                    guia especializado que fala inglês e francês
-                    para proporcionar uma experiência ainda mais completa aos
-                    nossos clientes.</p>
-            </section>
+    <main>
+        <div class="hero-banner">
+            <img src="assets/bg-hero.png" alt="Bela Belém" class="hero-image">
+        </div>
+        <section id="destaque">
+            <h2>Bem-vindo ao Bela Belem</h2>
+            <p>Explore o melhor da nossa cidade</p>
+            <p>Descubra os encantos da capital paraense. Contamos com um
+                guia especializado que fala inglês e francês
+                para proporcionar uma experiência ainda mais completa aos
+                nossos clientes.</p>
+        </section>
 
-            <!-- Os card são exibidos aqui -->
-            <section id="destaques-turisticos">
-                <h2>Principais Destinos</h2>
-                <div class="grade-destinos" id="container-pacotes"></div>
-            </section>
+        <!-- Os card são exibidos aqui -->
+        <section id="destaques-turisticos">
+            <h2>Principais Destinos</h2>
+            <div class="grade-destinos" id="container-pacotes"></div>
+        </section>
 
-            <section>
-                <p>Descubra o Paraíso do Pará e Viva Experiências Inesquecíveis.
-                    Imagine-se caminhando pelas areias brancas de Salinas,
-                    sentindo o vento suave enquanto o sol se põe no
-                    horizonte. Ou navegando pelos rios encantados da Amazônia,
-                    onde o boto cor-de-rosa surge para tornar seu
-                    momento ainda mais mágico. E que tal explorar a fascinante
-                    cultura de Belém em um city tour que revela a
-                    alma desta cidade rica em história e sabores?
-                    Esses não são apenas passeios, são memórias que você levará
-                    para a vida toda. Deixe-se envolver pela
-                    grandiosidade da Ilha de Marajó, com sua natureza
-                    exuberante, ou relaxe nas águas tranquilas da Ilha do
-                    Mosqueiro. Cada experiência é cuidadosamente desenhada para
-                    que você viva o melhor do Pará de forma
-                    única e inesquecível.
-                    Reserve agora e transforme sua viagem em uma jornada
-                    inesquecível. Momentos como esses não esperam —
-                    seja o protagonista da sua própria aventura!</p>
-            </section>
-        </main>
+        <section>
+            <p>Descubra o Paraíso do Pará e Viva Experiências Inesquecíveis.
+                Imagine-se caminhando pelas areias brancas de Salinas,
+                sentindo o vento suave enquanto o sol se põe no
+                horizonte. Ou navegando pelos rios encantados da Amazônia,
+                onde o boto cor-de-rosa surge para tornar seu
+                momento ainda mais mágico. E que tal explorar a fascinante
+                cultura de Belém em um city tour que revela a
+                alma desta cidade rica em história e sabores?
+                Esses não são apenas passeios, são memórias que você levará
+                para a vida toda. Deixe-se envolver pela
+                grandiosidade da Ilha de Marajó, com sua natureza
+                exuberante, ou relaxe nas águas tranquilas da Ilha do
+                Mosqueiro. Cada experiência é cuidadosamente desenhada para
+                que você viva o melhor do Pará de forma
+                única e inesquecível.
+                Reserve agora e transforme sua viagem em uma jornada
+                inesquecível. Momentos como esses não esperam —
+                seja o protagonista da sua própria aventura!</p>
+        </section>
+    </main>
 
-        <!-- Cabeçalhor, roda pé e card, respectivamente-->
-        <script src="js/scripts.js"></script>
-        <div id="footer"></div>
-        <script src="js/data.js"></script>
+    <!-- Cabeçalhor, roda pé e card, respectivamente-->
+    <script src="js/scripts.js"></script>
+    <div id="footer"></div>
+    <script src="js/data.js"></script>
 
-        <script>
+    <script>
         // Carrega o cabeçalho
         fetch('includes/header.html')
             .then(response => {
@@ -122,6 +125,11 @@
             <div class="destino">
                 <h3>${pacote.titulo}</h3>
                 <img src="${pacote.imagem[0]}" alt="${pacote.titulo}" loading="lazy">
+                <div class="precos">
+                    ${pacote.preco2
+                        ? `R$ ${pacote.preco1} (${pacote.hora1}h)<br>R$ ${pacote.preco2} (${pacote.hora2}h)`
+                        : `R$ ${pacote.preco1} - ${pacote.hora1} horas`}
+                </div>
                 <p>${pacote.des_resumida}</p>
                 <a href="pacotes/pacote.html?pacote=${pacoteId}" class="btn" aria-label="Saiba mais sobre ${pacote.titulo}">
                     Saiba Mais
@@ -133,6 +141,6 @@
         });
     </script>
 
-    </body>
+</body>
 
 </html>
