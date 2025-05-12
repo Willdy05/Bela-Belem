@@ -7,38 +7,52 @@
 
 /* Definição de cores principais usadas no site */
 :root {
-    --laranja: rgba(255,97,23,1); /* Laranja mais vibrante */
+    --laranja: rgba(255, 97, 23, 1);
+    /* Laranja mais vibrante */
     --laranja-claro: #FF944D;
     --laranja-escuro: #CC5200;
-    --destaque: #FFD700; /* Amarelo para destaques */
+    --destaque: #FFD700;
+    /* Amarelo para destaques */
 }
 
 /* Estilos gerais para o corpo da página */
 body {
-    font-family: 'Poppins', sans-serif; /* Fonte principal */
-    line-height: 1.6; /* Altura da linha */
-    background-color: var(--branco); /* Fundo branco */
-    color: var(--cinza-escuro); /* Texto cinza escuro */
-    font-size: 16px; /* Tamanho base da fonte */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte principal */
+    line-height: 1.6;
+    /* Altura da linha */
+    background-color: var(--branco);
+    /* Fundo branco */
+    color: var(--cinza-escuro);
+    /* Texto cinza escuro */
+    font-size: 16px;
+    /* Tamanho base da fonte */
     opacity: 0;
     animation: fadeIn 0.5s ease-in forwards;
 }
 
 /* Definição de cores adicionais */
 @keyframes fadeIn {
-    to { opacity: 1; }
+    to {
+        opacity: 1;
+    }
 }
 
-h1, h2, h3 {
-    font-family: 'Merriweather', serif; /* Fonte para títulos */
+h1,
+h2,
+h3 {
+    font-family: 'Merriweather', serif;
+    /* Fonte para títulos */
 }
 
 /* Container da imagem */
 .hero-banner {
     width: 100%;
-    height: 100vh; /* Altura total da tela */
+    height: 100vh;
+    /* Altura total da tela */
     overflow: hidden;
-    position: relative; /* Importante para conter a imagem */
+    position: relative;
+    /* Importante para conter a imagem */
 }
 
 /* Imagem ajustada */
@@ -46,139 +60,208 @@ h1, h2, h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block; /* Remove espaços fantasmas */
+    display: block;
+    /* Remove espaços fantasmas */
 }
 
 
 /* Estilização do cabeçalho fixo */
 header {
-    position: fixed; /* Fixa o cabeçalho no topo */
+    position: fixed;
+    /* Fixa o cabeçalho no topo */
     top: 0;
     left: 0;
-    width: 100%; /* Largura total */
-    background-color: var(--laranja); /* Fundo laranja */
-    padding: 10px 20px; /* Espaçamento interno */
-    box-shadow: 0 2px 5px var(--cinza-escuro); /* Sombra */
-    z-index: 1000; /* Prioridade de exibição */
-    display: flex; /* Layout flexível */
-    justify-content: space-between; /* Espaçamento entre elementos */
-    align-items: center; /* Alinhamento vertical */
+    width: 100%;
+    /* Largura total */
+    background-color: var(--laranja);
+    /* Fundo laranja */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    box-shadow: 0 2px 5px var(--cinza-escuro);
+    /* Sombra */
+    z-index: 1000;
+    /* Prioridade de exibição */
+    display: flex;
+    /* Layout flexível */
+    justify-content: space-between;
+    /* Espaçamento entre elementos */
+    align-items: center;
+    /* Alinhamento vertical */
 }
 
 /* Estilo do logotipo */
 .logo {
-    display: flex; /* Layout flexível */
-    align-items: center; /* Alinhamento vertical */
+    display: flex;
+    /* Layout flexível */
+    align-items: center;
+    /* Alinhamento vertical */
 }
 
 .logo-img {
-    width: 40px; /* Largura da imagem */
-    height: 40px; /* Altura da imagem */
-    margin-right: 10px; /* Espaçamento à direita */
+    width: 40px;
+    /* Largura da imagem */
+    height: 40px;
+    /* Altura da imagem */
+    margin-right: 10px;
+    /* Espaçamento à direita */
 }
 
 /* Estilo do título no cabeçalho */
 header h1 {
-    margin: 0; /* Remove margens */
-    font-size: 24px; /* Tamanho da fonte */
-    color: var(--branco); /* Cor branca */
+    margin: 0;
+    /* Remove margens */
+    font-size: 24px;
+    /* Tamanho da fonte */
+    color: var(--branco);
+    /* Cor branca */
 }
 
 /* Botão de alternância do menu (hambúrguer) */
 .menu-toggle {
-    display: none; /* Esconde por padrão */
-    background: none; /* Sem fundo */
-    border: none; /* Sem borda */
-    cursor: pointer; /* Cursor de ponteiro */
-    padding: 10px; /* Espaçamento interno */
+    display: none;
+    /* Esconde por padrão */
+    background: none;
+    /* Sem fundo */
+    border: none;
+    /* Sem borda */
+    cursor: pointer;
+    /* Cursor de ponteiro */
+    padding: 10px;
+    /* Espaçamento interno */
 }
 
 /* Estilo das barras do ícone de hambúrguer */
 .hamburger {
-    display: block; /* Exibe como bloco */
-    width: 25px; /* Largura */
-    height: 3px; /* Altura */
-    background-color: var(--branco); /* Cor branca */
-    position: relative; /* Posição relativa para pseudo-elementos */
-    transition: transform 0.3s ease; /* Transição suave */
+    display: block;
+    /* Exibe como bloco */
+    width: 25px;
+    /* Largura */
+    height: 3px;
+    /* Altura */
+    background-color: var(--branco);
+    /* Cor branca */
+    position: relative;
+    /* Posição relativa para pseudo-elementos */
+    transition: transform 0.3s ease;
+    /* Transição suave */
 }
 
 /* Pseudo-elementos para criar as barras superior e inferior */
 .hamburger::before,
 .hamburger::after {
-    content: ''; /* Conteúdo vazio */
-    width: 25px; /* Largura */
-    height: 3px; /* Altura */
-    background-color: var(--branco); /* Cor branca */
-    position: absolute; /* Posição absoluta */
-    left: 0; /* Alinhamento à esquerda */
-    transition: transform 0.3s ease; /* Transição suave */
+    content: '';
+    /* Conteúdo vazio */
+    width: 25px;
+    /* Largura */
+    height: 3px;
+    /* Altura */
+    background-color: var(--branco);
+    /* Cor branca */
+    position: absolute;
+    /* Posição absoluta */
+    left: 0;
+    /* Alinhamento à esquerda */
+    transition: transform 0.3s ease;
+    /* Transição suave */
 }
 
 .hamburger::before {
-    top: -8px; /* Posição acima */
+    top: -8px;
+    /* Posição acima */
 }
 
 .hamburger::after {
-    top: 8px; /* Posição abaixo */
+    top: 8px;
+    /* Posição abaixo */
 }
 
 /* Estilo do botão ativo (menu aberto) */
 .menu-toggle.active .hamburger {
-    transform: rotate(45deg); /* Rotação */
+    transform: rotate(45deg);
+    /* Rotação */
 }
 
 .menu-toggle.active .hamburger::before {
-    transform: rotate(90deg); /* Rotação */
-    top: 0; /* Centraliza */
+    transform: rotate(90deg);
+    /* Rotação */
+    top: 0;
+    /* Centraliza */
 }
 
 .menu-toggle.active .hamburger::after {
-    transform: rotate(90deg); /* Rotação */
-    top: 0; /* Centraliza */
+    transform: rotate(90deg);
+    /* Rotação */
+    top: 0;
+    /* Centraliza */
 }
 
 /* Estilo dos ícones de contato */
 .contato-icones {
-    display: flex; /* Layout flexível */
-    gap: 10px; /* Espaçamento entre ícones */
-    justify-content: center; /* Centraliza os ícones */
-    margin-top: 20px; /* Espaçamento superior */
+    display: flex;
+    /* Layout flexível */
+    gap: 10px;
+    /* Espaçamento entre ícones */
+    justify-content: center;
+    /* Centraliza os ícones */
+    margin-top: 20px;
+    /* Espaçamento superior */
 }
 
 /* Botões gerais */
 .btn {
-    display: inline-block; /* Exibe como bloco inline */
-    padding: 10px 20px; /* Espaçamento interno */
-    background-color: var(--azul); /* Fundo azul */
-    color: var(--branco); /* Texto branco */
-    text-decoration: none; /* Remove sublinhado */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-    object-fit: contain; /* Ajusta o conteúdo */
-    font-weight: bold; /* Negrito */
-    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    display: inline-block;
+    /* Exibe como bloco inline */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    background-color: var(--azul);
+    /* Fundo azul */
+    color: var(--branco);
+    /* Texto branco */
+    text-decoration: none;
+    /* Remove sublinhado */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transições suaves */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+    object-fit: contain;
+    /* Ajusta o conteúdo */
+    font-weight: bold;
+    /* Negrito */
+    letter-spacing: 0.5px;
+    /* Espaçamento entre letras */
 }
 
 /* Estilo dos ícones */
 .icone {
-    width: 40px; /* Largura */
-    height: 40px; /* Altura */
-    object-fit: contain; /* Ajusta o conteúdo */
+    width: 40px;
+    /* Largura */
+    height: 40px;
+    /* Altura */
+    object-fit: contain;
+    /* Ajusta o conteúdo */
 }
 
 /* Efeitos de hover para botões e ícones */
-.btn:hover, .icone:hover {
-    background-color: var(--laranja); /* Fundo laranja no hover */
-    transform: translateY(-2px) scale(1.05); /* Combina elevação e aumento */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+.btn:hover,
+.icone:hover {
+    background-color: var(--laranja);
+    /* Fundo laranja no hover */
+    transform: translateY(-2px) scale(1.05);
+    /* Combina elevação e aumento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra mais intensa */
 }
 
 /* Foco nos elementos */
-.btn:focus, .icone:focus, .nav-menu ul li a:focus {
-    outline: 2px solid var(--laranja-escuro); /* Contorno laranja escuro */
-    outline-offset: 2px; /* Distância do contorno */
+.btn:focus,
+.icone:focus,
+.nav-menu ul li a:focus {
+    outline: 2px solid var(--laranja-escuro);
+    /* Contorno laranja escuro */
+    outline-offset: 2px;
+    /* Distância do contorno */
 }
 
 .btn-destaque {
@@ -191,60 +274,85 @@ header h1 {
 
 .btn-destaque:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255,107,0,0.4);
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.4);
 }
 
 /* Estilo do menu de navegação */
 .nav-menu ul {
-    list-style: none; /* Remove marcadores */
-    margin: 0; /* Remove margens */
-    padding: 0; /* Remove paddings */
-    display: flex; /* Layout flexível */
+    list-style: none;
+    /* Remove marcadores */
+    margin: 0;
+    /* Remove margens */
+    padding: 0;
+    /* Remove paddings */
+    display: flex;
+    /* Layout flexível */
 }
 
 /* Estilo dos itens do menu */
 .nav-menu ul li {
-    margin: 0 15px; /* Espaçamento horizontal */
+    margin: 0 15px;
+    /* Espaçamento horizontal */
 }
 
 /* Links do menu */
 .nav-menu ul li a {
-    color: var(--cinza-claro); /* Texto cinza claro */
-    text-decoration: none; /* Remove sublinhado */
-    font-weight: bold; /* Negrito */
-    transition: color 0.3s ease; /* Transição suave */
-    padding: 5px 10px; /* Espaçamento interno */
-    border-radius: 3px; /* Bordas arredondadas */
+    color: var(--cinza-claro);
+    /* Texto cinza claro */
+    text-decoration: none;
+    /* Remove sublinhado */
+    font-weight: bold;
+    /* Negrito */
+    transition: color 0.3s ease;
+    /* Transição suave */
+    padding: 5px 10px;
+    /* Espaçamento interno */
+    border-radius: 3px;
+    /* Bordas arredondadas */
 }
 
 /* Hover nos links do menu */
 .nav-menu ul li a:hover {
-    background-color: var(--azul); /* Fundo azul no hover */
-    color: var(--branco); /* Texto branco no hover */
+    background-color: var(--azul);
+    /* Fundo azul no hover */
+    color: var(--branco);
+    /* Texto branco no hover */
 }
 
 /* Espaçamento superior para o conteúdo principal */
 main {
-    padding: 0px; /* Espaçamento para compensar o cabeçalho fixo */
+    padding: 0px;
+    /* Espaçamento para compensar o cabeçalho fixo */
 }
 
 /* Estilo dos títulos das seções */
 section h2 {
-    text-align: center; /* Centraliza o texto */
-    margin-bottom: 1rem; /* Espaçamento inferior */
-    color: var(--branco); /* Texto branco */
-    background-color: var(--laranja); /* Fundo laranja */
-    padding: 0.5rem; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    font-size: 2rem; /* Tamanho da fonte */
+    text-align: center;
+    /* Centraliza o texto */
+    margin-bottom: 1rem;
+    /* Espaçamento inferior */
+    color: var(--branco);
+    /* Texto branco */
+    background-color: var(--laranja);
+    /* Fundo laranja */
+    padding: 0.5rem;
+    /* Espaçamento interno */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    font-size: 2rem;
+    /* Tamanho da fonte */
 }
 
 /* Estilo geral das seções */
 section {
-    color: var(--preto); /* Texto preto */
-    margin: 3rem 1rem; /* Aumenta o espaçamento vertical */
-    font-size: 1rem; /* Tamanho da fonte */
-    line-height: 1.8; /* Melhora a legibilidade */
+    color: var(--preto);
+    /* Texto preto */
+    margin: 3rem 1rem;
+    /* Aumenta o espaçamento vertical */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    line-height: 1.8;
+    /* Melhora a legibilidade */
 }
 
 /* Estilo dos parágrafos */
@@ -257,30 +365,46 @@ section {
 
 /* Grade de destinos */
 .grade-destinos {
-    display: flex; /* Layout flexível */
-    flex-wrap: wrap; /* Permite quebra de linha */
-    justify-content: space-between; /* Espaçamento entre itens */
-    gap: 1rem; /* Espaçamento entre itens */
+    display: flex;
+    /* Layout flexível */
+    flex-wrap: wrap;
+    /* Permite quebra de linha */
+    justify-content: space-between;
+    /* Espaçamento entre itens */
+    gap: 1rem;
+    /* Espaçamento entre itens */
 }
 
 /* Estilo de cada destino */
 .destino {
-    flex: 1 1 calc(33.333% - 1rem); /* Tamanho flexível */
-    background-color: var(--branco); /* Fundo branco */
-    border: 1px solid var(--cinza-claro); /* Borda cinza clara */
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 1rem; /* Espaçamento interno */
-    box-shadow: 0 2px 5px var(--cinza-escuro); /* Sombra */
-    text-align: center; /* Centraliza o texto */
+    flex: 1 1 calc(33.333% - 1rem);
+    /* Tamanho flexível */
+    background-color: var(--branco);
+    /* Fundo branco */
+    border: 1px solid var(--cinza-claro);
+    /* Borda cinza clara */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    padding: 1rem;
+    /* Espaçamento interno */
+    box-shadow: 0 2px 5px var(--cinza-escuro);
+    /* Sombra */
+    text-align: center;
+    /* Centraliza o texto */
 }
 
 /* Estilo das imagens dos destinos */
 .destino img {
-    width: 100%; /* Largura total */
-    height: 200px; /* Altura fixa */
-    object-fit: cover; /* Ajusta a imagem */
-    border-radius: 5px; /* Bordas arredondadas */
-    margin-bottom: 10px; /* Espaçamento inferior */
+    width: 100%;
+    /* Largura total */
+    height: 200px;
+    /* Altura fixa */
+    object-fit: cover;
+    /* Ajusta a imagem */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    margin-bottom: 10px;
+    /* Espaçamento inferior */
     position: relative;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -289,152 +413,236 @@ section {
 /* Efeito de hover nas imagens dos destinos */
 .destino img:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo dos títulos dos destinos */
 .destino h3 {
-    margin-bottom: 15px; /* Espaçamento inferior */
-    color: var(--preto); /* Texto preto */
+    margin-bottom: 15px;
+    /* Espaçamento inferior */
+    color: var(--preto);
+    /* Texto preto */
 }
 
 /* Estilo dos parágrafos dos destinos */
 .destino p {
-    color: var(--preto); /* Texto preto */
-    margin-bottom: 15px; /* Espaçamento inferior */
+    color: var(--preto);
+    /* Texto preto */
+    margin-bottom: 15px;
+    /* Espaçamento inferior */
 }
 
 /* Estilo do rodapé */
-footer {
-    background-color: var(--laranja); /* Fundo laranja */
-    color: var(--branco); /* Texto branco */
-    text-align: center; /* Centraliza o texto */
-    padding: 30px 0; /* Aumenta o espaçamento interno */
-    margin-top: 40px; /* Espaçamento superior */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior */
-    font-size: 0.9rem; /* Reduz o tamanho da fonte */
+.site-footer {
+    background: var(--laranja);
+    color: white;
+    padding: 2rem;
 }
 
-/* Links no rodapé */
-footer a {
-    color: var(--branco); /* Texto branco */
-    text-decoration: none; /* Remove sublinhado */
-    padding: 5px 10px; /* Espaçamento interno */
-    border-radius: 3px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease; /* Transição suave */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Hover nos links do rodapé */
-footer a:hover {
-    color: var(--laranja-claro); /* Texto laranja claro */
-    background-color: var(--laranja-claro); /* Fundo laranja claro */
+.social-icon img {
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
+.contact-info {
+    text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.contact-item {
+    margin: 0.5rem 0;
+    line-height: 1.8;
+}
+
+.contact-label {
+    font-weight: 400;
+}
+
+.contact-link,
+.contact-detail {
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-brand {
+    width: 100%;
+    display: block;
+}
+
+.footer-logo {
+    width: 100%;
+    height: auto;
 }
 
 /* Estilo do modal */
 .modal {
-    display: none; /* Esconde por padrão */
-    position: fixed; /* Fixa na tela */
+    display: none;
+    /* Esconde por padrão */
+    position: fixed;
+    /* Fixa na tela */
     top: 0;
     left: 0;
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-    z-index: 1000; /* Prioridade de exibição */
-    transition: opacity 0.3s ease; /* Transição suave */
-    opacity: 0; /* Invisível por padrão */
+    width: 100%;
+    /* Largura total */
+    height: 100%;
+    /* Altura total */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo semitransparente */
+    z-index: 1000;
+    /* Prioridade de exibição */
+    transition: opacity 0.3s ease;
+    /* Transição suave */
+    opacity: 0;
+    /* Invisível por padrão */
 }
 
 /* Conteúdo do modal */
 .modal-conteudo {
-    background-color: var(--branco); /* Fundo branco */
-    margin: 10% auto; /* Centraliza verticalmente */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    width: 90%; /* Largura relativa */
-    max-width: 500px; /* Largura máxima */
-    position: relative; /* Posição relativa */
-    transition: transform 0.3s ease; /* Transição suave */
-    transform: translateY(-20px); /* Posição inicial */
+    background-color: var(--branco);
+    /* Fundo branco */
+    margin: 10% auto;
+    /* Centraliza verticalmente */
+    padding: 1rem;
+    /* Espaçamento interno */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    width: 90%;
+    /* Largura relativa */
+    max-width: 500px;
+    /* Largura máxima */
+    position: relative;
+    /* Posição relativa */
+    transition: transform 0.3s ease;
+    /* Transição suave */
+    transform: translateY(-20px);
+    /* Posição inicial */
 }
 
 /* Modal ativo */
 .modal.active {
-    opacity: 1; /* Torna visível */
+    opacity: 1;
+    /* Torna visível */
 }
 
 /* Conteúdo do modal ativo */
 .modal.active .modal-conteudo {
-    transform: translateY(0); /* Centraliza */
+    transform: translateY(0);
+    /* Centraliza */
 }
 
 /* Botão para fechar o modal */
 .fechar-modal {
-    position: absolute; /* Posição absoluta */
-    top: 10px; /* Distância do topo */
-    right: 15px; /* Distância da direita */
-    font-size: 24px; /* Tamanho da fonte */
-    cursor: pointer; /* Cursor de ponteiro */
+    position: absolute;
+    /* Posição absoluta */
+    top: 10px;
+    /* Distância do topo */
+    right: 15px;
+    /* Distância da direita */
+    font-size: 24px;
+    /* Tamanho da fonte */
+    cursor: pointer;
+    /* Cursor de ponteiro */
 }
 
 /* Hover no botão de fechar modal */
 .fechar-modal:hover {
-    color: var(--laranja); /* Cor laranja */
+    color: var(--laranja);
+    /* Cor laranja */
 }
 
 /* Informações de contato */
 .info-contato {
-    margin-bottom: 20px; /* Espaçamento inferior */
+    margin-bottom: 20px;
+    /* Espaçamento inferior */
 }
 
 /* Links de contato */
 .info-contato a {
-    display: flex; /* Layout flexível */
-    align-items: center; /* Alinhamento vertical */
-    gap: 10px; /* Espaçamento entre ícones e texto */
-    text-decoration: none; /* Remove sublinhado */
-    color: var(--branco); /* Texto preto */
-    padding: 10px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease; /* Transição suave */
+    display: flex;
+    /* Layout flexível */
+    align-items: center;
+    /* Alinhamento vertical */
+    gap: 10px;
+    /* Espaçamento entre ícones e texto */
+    text-decoration: none;
+    /* Remove sublinhado */
+    color: var(--branco);
+    /* Texto preto */
+    padding: 10px;
+    /* Espaçamento interno */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    transition: background-color 0.3s ease;
+    /* Transição suave */
 }
 
 /* Hover nos links de contato */
 .info-contato a:hover {
-    background-color: var(--cinza-claro); /* Fundo cinza claro */
+    background-color: var(--cinza-claro);
+    /* Fundo cinza claro */
 }
 
 /* Estilo dos formulários de contato */
 .form-contato label {
-    display: block; /* Exibe como bloco */
-    margin-bottom: 5px; /* Espaçamento inferior */
+    display: block;
+    /* Exibe como bloco */
+    margin-bottom: 5px;
+    /* Espaçamento inferior */
 }
 
-.form-contato input, .form-contato textarea {
-    font-size: 1rem; /* Tamanho da fonte */
-    background-color: var(--cinza-claro); /* Fundo cinza claro */
-    border: 1px solid var(--cinza-medio); /* Borda cinza médio */
-    transition: border-color 0.3s ease; /* Transição suave */
+.form-contato input,
+.form-contato textarea {
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    background-color: var(--cinza-claro);
+    /* Fundo cinza claro */
+    border: 1px solid var(--cinza-medio);
+    /* Borda cinza médio */
+    transition: border-color 0.3s ease;
+    /* Transição suave */
 }
 
 /* Foco nos campos do formulário */
-.form-contato input:focus, .form-contato textarea:focus {
-    border-color: var(--laranja); /* Borda laranja */
-    background-color: var(--branco); /* Fundo branco */
+.form-contato input:focus,
+.form-contato textarea:focus {
+    border-color: var(--laranja);
+    /* Borda laranja */
+    background-color: var(--branco);
+    /* Fundo branco */
 }
 
 /* Botão do formulário */
 .form-contato button {
-    background-color: var(--laranja); /* Fundo laranja */
-    color: var(--branco); /* Texto branco */
-    padding: 10px 20px; /* Espaçamento interno */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de ponteiro */
+    background-color: var(--laranja);
+    /* Fundo laranja */
+    color: var(--branco);
+    /* Texto branco */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    border: none;
+    /* Sem borda */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Cursor de ponteiro */
 }
 
 /* Hover no botão do formulário */
 .form-contato button:hover {
-    background-color: var(--laranja-escuro); /* Fundo laranja escuro */
+    background-color: var(--laranja-escuro);
+    /* Fundo laranja escuro */
 }
 
 /* Seções */
@@ -463,72 +671,95 @@ footer a:hover {
 /* Estilos responsivos para telas menores */
 @media (max-width: 768px) {
     footer {
-        padding: 30px 0; /* Ajusta o espaçamento */
+        padding: 30px 0;
+        /* Ajusta o espaçamento */
     }
 
     .menu-toggle {
-        display: block; /* Exibe o botão de menu */
+        display: block;
+        /* Exibe o botão de menu */
     }
 
     .hero-banner {
-        min-height: 400px; /* Aumenta a altura em telas maiores */
+        min-height: 400px;
+        /* Aumenta a altura em telas maiores */
     }
 
     .nav-menu {
-        display: none; /* Esconde o menu */
-        position: absolute; /* Posição absoluta */
-        top: 60px; /* Distância do topo */
-        right: 20px; /* Distância da direita */
-        background-color: var(--laranja); /* Fundo laranja */
-        box-shadow: 0 2px 5px var(--cinza-escuro); /* Sombra */
-        border-radius: 5px; /* Bordas arredondadas */
-        z-index: 1000; /* Prioridade de exibição */
+        display: none;
+        /* Esconde o menu */
+        position: absolute;
+        /* Posição absoluta */
+        top: 60px;
+        /* Distância do topo */
+        right: 20px;
+        /* Distância da direita */
+        background-color: var(--laranja);
+        /* Fundo laranja */
+        box-shadow: 0 2px 5px var(--cinza-escuro);
+        /* Sombra */
+        border-radius: 5px;
+        /* Bordas arredondadas */
+        z-index: 1000;
+        /* Prioridade de exibição */
     }
 
     .nav-menu.active {
-        display: block; /* Exibe o menu ativo */
+        display: block;
+        /* Exibe o menu ativo */
     }
 
     .nav-menu ul {
-        flex-direction: column; /* Alinha itens verticalmente */
+        flex-direction: column;
+        /* Alinha itens verticalmente */
     }
 
     .nav-menu ul li {
-        margin: 10px 0; /* Espaçamento vertical */
-        text-align: center; /* Centraliza o texto */
+        margin: 10px 0;
+        /* Espaçamento vertical */
+        text-align: center;
+        /* Centraliza o texto */
     }
 
     .destino {
-        flex: 1 1 calc(50% - 1rem); /* Ajusta o tamanho dos destinos */
+        flex: 1 1 calc(50% - 1rem);
+        /* Ajusta o tamanho dos destinos */
     }
 
     section {
-        margin: 2rem 0.5rem; /* Reduz o espaçamento em telas menores */
+        margin: 2rem 0.5rem;
+        /* Reduz o espaçamento em telas menores */
     }
 
     .btn {
-        padding: 8px 16px; /* Ajusta o tamanho dos botões */
+        padding: 8px 16px;
+        /* Ajusta o tamanho dos botões */
     }
 
     section h2 {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte */
+        font-size: 1.5rem;
+        /* Reduz o tamanho da fonte */
     }
 }
 
 @media (max-width: 480px) {
     body {
-        padding: 0 10px; /* Ajusta o espaçamento lateral */
+        padding: 0 10px;
+        /* Ajusta o espaçamento lateral */
     }
 
     .destino {
-        flex: 1 1 100%; /* Cada destino ocupa 100% da largura */
+        flex: 1 1 100%;
+        /* Cada destino ocupa 100% da largura */
     }
 
     .modal-conteudo {
-        padding: 0.5rem; /* Reduz o espaçamento interno */
+        padding: 0.5rem;
+        /* Reduz o espaçamento interno */
     }
 
     .nav-menu {
-        display: block; /* Exibe o menu */
+        display: block;
+        /* Exibe o menu */
     }
 }
