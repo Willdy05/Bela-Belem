@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
 });
 
 // Rotas adicionais (ajuste conforme necessário)
-app.get('/sobre', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'sobre.html'));
+app.get('/pacote', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'pacotes', 'pacote.html'));
 });
 
 // Inicia o servidor
