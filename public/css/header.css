@@ -6,7 +6,7 @@
     text-decoration: none; /* Remove o sublinhado */
     font-size: 1.2rem; /* Aumentar o tamanho da fonte */
     font-weight: bold; /* Tornar o texto em negrito */
-    color: #ffffff; /* Definir uma cor para o texto */
+    color: #000000; /* Definir uma cor para o texto */
     display: flex; /* Garantir que o link e a logo fiquem lado a lado */
     align-items: center; /* Alinhar verticalmente o texto e a logo */
     gap: 10px; /* Espaçamento entre a logo e o texto */
