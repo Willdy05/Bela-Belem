@@ -1,36 +1,63 @@
 #main-header.hidden {
-    transform: translateY(-100%); /* Esconder o header */
+    transform: translateY(-100%);
+    /* Esconder o header */
 }
 
 #main-header a {
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 1.2rem; /* Aumentar o tamanho da fonte */
-    font-weight: bold; /* Tornar o texto em negrito */
-    color: #000000; /* Definir uma cor para o texto */
-    display: flex; /* Garantir que o link e a logo fiquem lado a lado */
-    align-items: center; /* Alinhar verticalmente o texto e a logo */
-    gap: 10px; /* Espaçamento entre a logo e o texto */
-    margin-top: 10px; /* Adicionar espaçamento superior */
-    margin-bottom: 10px; /* Adicionar espaçamento inferior */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    font-size: 1.2rem;
+    /* Aumentar o tamanho da fonte */
+    font-weight: bold;
+    /* Tornar o texto em negrito */
+    color: #000000;
+    /* Definir uma cor para o texto */
+    display: flex;
+    /* Garantir que o link e a logo fiquem lado a lado */
+    align-items: center;
+    /* Alinhar verticalmente o texto e a logo */
+    gap: 10px;
+    /* Espaçamento entre a logo e o texto */
+    margin-top: 10px;
+    /* Adicionar espaçamento superior */
+    margin-bottom: 10px;
+    /* Adicionar espaçamento inferior */
 }
 
 #main-header {
-    position: fixed; /* Fixar o header no topo da tela */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Garantir que o header fique acima de outros elementos */
-    transition: transform 0.3s ease-in-out;
-    display: flex; /* Ativar o Flexbox */
-    align-items: center; /* Alinhar verticalmente os itens */
-    padding: 0 20px; /* Adicionar espaçamento interno */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--degrade-laranja);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 #main-header .logo {
-    display: flex; /* Garantir que a logo e o título fiquem lado a lado */
-    align-items: center; /* Alinhar verticalmente a imagem e o título */
+    display: flex;
+    /* Garantir que a logo e o título fiquem lado a lado */
+    align-items: center;
+    /* Alinhar verticalmente a imagem e o título */
 }
 
 #main-header .logo img {
-    margin-right: 10px; /* Espaçamento entre a imagem e o título */
+    margin-right: 10px;
+    /* Espaçamento entre a imagem e o título */
+}
+
+/* Menu desktop */
+.nav-menu ul li a {
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+}
+
+.nav-menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Menu mobile */
+@media (max-width: 768px) {
+    .nav-menu {
+        top: 70px;
+        background: var(--laranja-escuro);
+    }
 }

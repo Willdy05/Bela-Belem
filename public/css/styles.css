@@ -8,9 +8,9 @@
 /* Definição de cores principais usadas no site */
 :root {
     --laranja: rgba(255, 97, 23, 1);
-    /* Laranja mais vibrante */
     --laranja-claro: #FF944D;
-    --laranja-escuro: #CC5200;
+    --laranja-escuro: #EC4E20;
+    --degrade-laranja: linear-gradient(135deg, var(--laranja) 0%, var(--laranja-escuro) 100%);
     --destaque: #FFD700;
     --branco: #FFFFFF;
     --verde: #2E5E4E;
@@ -238,28 +238,18 @@ header h1 {
 /* Botões gerais */
 .btn {
     display: inline-block;
-    /* Exibe como bloco inline */
-    padding: 10px 20px;
-    /* Espaçamento interno */
     color: var(--branco);
-    /* Texto branco */
     text-decoration: none;
-    /* Remove sublinhado */
-    border-radius: 5px;
-    /* Bordas arredondadas */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    /* Transições suaves */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* Sombra */
     object-fit: contain;
-    /* Ajusta o conteúdo */
-    font-weight: bold;
-    /* Negrito */
     letter-spacing: 0.5px;
-    /* Espaçamento entre letras */
-    background: linear-gradient(135deg, var(--laranja) 0%, var(--laranja-escuro) 100%);
     position: relative;
     overflow: hidden;
+    background: var(--degrade-laranja);
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 600;
 }
 
 .btn::after {
@@ -436,14 +426,14 @@ section {
     /* Sombra */
     text-align: center;
     /* Centraliza o texto */
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
 .destino:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(255, 97, 23, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
 }
 
 .destino::before {

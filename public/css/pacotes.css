@@ -16,12 +16,25 @@
 }
 
 /* Macro imagem */
-#macro-imagem img {
+.hero_banner {
+    position: relative;
+    height: 80vh;
+}
+
+.hero-image {
+    position: absolute;
     width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title {
+    position: relative;
+    color: #f9f9f9;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 20vh;
 }
 
 /* Layout principal */
@@ -70,8 +83,8 @@
 
 #carrossel {
     position: relative;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(255, 97, 23, 0.1);
+    border: 3px solid var(--laranja);
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -98,13 +111,14 @@ h3 {
     top: 50%;
     transform: translateY(-50%);
     border: none;
-    color: white;
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
-    background: var(--laranja);
-    width: 40px;
-    height: 40px;
+    background: rgba(255,255,255,0.9);
+    color: var(--laranja);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,15 +164,15 @@ h3 {
     /* Ajuste o tamanho máximo da imagem */
     overflow: hidden;
     margin: 2rem auto;
-    padding: 1rem;
-    background: var(--beje);
+    padding: 1.5rem;
+    background: var(--degrade-laranja);
     border-radius: 12px;
     transition: transform 0.3s;
 }
 
 .reserva:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255,97,23,0.1);
+    box-shadow: 0 10px 20px rgba(255, 97, 23, 0.1);
 }
 
 
@@ -167,7 +181,9 @@ h3 {
     height: auto;
     object-fit: contain;
     /* Garante que a imagem seja ajustada proporcionalmente */
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    filter: brightness(0) invert(1);
+    /* Tornar ícone branco */
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 /* Responsividade */
@@ -185,13 +201,19 @@ h3 {
     #titulo-pacote {
         font-size: 2rem;
     }
-    
+
     .imagens-carrossel img {
         height: 250px;
     }
-    
+
     #macro-imagem img {
         height: 300px;
+    }
+
+    #lado-esquerdo {
+        border-right: none;
+        border-bottom: 2px solid var(--laranja-claro);
+        padding-bottom: 2rem;
     }
 }
 
@@ -199,7 +221,7 @@ h3 {
     #titulo-pacote {
         font-size: 1.8rem;
     }
-    
+
     .reserva {
         max-width: 280px;
     }

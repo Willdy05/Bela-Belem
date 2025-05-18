@@ -16,9 +16,10 @@
 
     <main>
         <!-- Macro imagem -->
-        <section id="macro-imagem">
+        <section id="macro-imagem" class="hero-banner">
             <!-- Não está errado -->
-            <img id="imagem-pacote" src="" alt="Imagem do pacote">
+            <img id="imagem-pacote" src="" alt="Imagem do pacote" class="hero-image">
+            <h1 id="hero-title" class="hero-title"></h1>
         </section>
 
         <!-- Conteúdo principal -->
@@ -135,6 +136,9 @@
             if (pacoteId && pacotes[pacoteId]) {
                 const pacote = pacotes[pacoteId]; // Define a variável no escopo correto
                 carregarPacote(pacoteId);
+
+                // Adiciona o título do pacote ao hero title
+                document.getElementById('hero-title').textContent = pacote.titulo;
 
                 // Configuração do carrossel
                 const carrossel = document.querySelector(".imagens-carrossel");
