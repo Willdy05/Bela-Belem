@@ -114,9 +114,9 @@ h3 {
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     color: var(--laranja);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     width: 50px;
     height: 50px;
     display: flex;
@@ -216,6 +216,68 @@ h3 {
     text-decoration: none;
 }
 
+/* Estilos para as novas seções */
+.info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1200px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h2 {
+    color: var(--laranja-escuro);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffefe7;
+}
+
+.info-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-column h3 {
+    color: var(--laranja);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.info-column ul {
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+.info-column li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.info-column li::before {
+    content: "•";
+    color: var(--laranja);
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+
 /* Responsividade */
 @media (max-width: 768px) {
     #conteudo-pacote {
@@ -244,6 +306,10 @@ h3 {
         border-right: none;
         border-bottom: 2px solid var(--laranja-claro);
         padding-bottom: 2rem;
+    }
+
+    .info-content {
+        flex-direction: column;
     }
 }
 
