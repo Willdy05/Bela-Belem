@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regulamento de Passeios Turísticos - Bela Belém</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Estilos específicos para a página de regulamentos */
@@ -190,7 +190,7 @@
 
     <script>
         // Carrega o cabeçalho
-        fetch('../includes/header.html')
+        fetch('/includes/header.html')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Erro ao carregar o header: ${response.status} ${response.statusText}`);
@@ -232,7 +232,7 @@
             });
 
         // Carrega o rodapé
-        fetch('../includes/footer.html')
+        fetch('/includes/footer.html')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Erro ao carregar o footer: ${response.status} ${response.statusText}`);
@@ -247,6 +247,6 @@
                 document.getElementById('footer').innerHTML = '<p>Erro ao carregar o rodapé.</p>';
             });
     </script>
-    <script src="../js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -117,7 +117,7 @@ O código de scroll no header-scroll.js já está duplicado no HTML. Centralize-
 
 7. Lazy Loading de Imagens
 Adicione o atributo loading="lazy" a todas as imagens para melhorar o desempenho.
-<img src="/assets/passeio/ajuruteua.jpg" alt="Praia de Ajuruteua" loading="lazy">
+<img src="assets/passeio/ajuruteua.jpg" alt="Praia de Ajuruteua" loading="lazy">
 
 8. Minimizar Dependências Inline
 Evite scripts inline no HTML (<script>). Centralize-os em arquivos JS para facilitar a depuração e reutilização.

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Pacote</title>
-    <link rel="stylesheet" href="../css/pacotes.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/pacotes.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -55,10 +55,10 @@
         <section>
             <div class="reserva">
                 <a href="https://www.google.com/url?q=https%3A%2F%2Fwa.me%2F%2F559180606922%3Ftext%3DTenho%2520interesse%2520em%2520viajar%2520com%2520Bela%2520Bel%25C3%25A9m%2520Turismo&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw2T4eE6OeC867BkaIPiDdWD"
-                    target="_blank"><img src="../assets/reserva.png" alt="reserva"></a>
+                    target="_blank"><img src="assets/reserva.png" alt="reserva"></a>
             </div>
             <div class="regulamentos">
-                <a href="../includes/regulamentos.html">Regulamentos</a>
+                <a href="includes/regulamentos.html">Regulamentos</a>
             </div>
         </section>
 
@@ -113,11 +113,11 @@
 
     <div id="footer"></div>
 
-    <script src="../js/scripts.js"></script>
-    <script src="../js/data.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/data.js"></script>
     <script>
         // Carrega o cabeçalho
-        fetch('../includes/header.html')
+        fetch('/includes/header.html')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Erro ao carregar o header: ${response.status} ${response.statusText}`);
@@ -164,7 +164,7 @@
             });
 
         // Carrega o rodapé
-        fetch('../includes/footer.html')
+        fetch('/includes/footer.html')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Erro ao carregar o footer: ${response.status} ${response.statusText}`);
