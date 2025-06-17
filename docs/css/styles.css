@@ -10,13 +10,17 @@
     --laranja: rgba(255, 97, 23, 1);
     --laranja-claro: #FF944D;
     --laranja-escuro: #EC4E20;
-    --degrade-laranja: linear-gradient(135deg, var(--laranja) 0%, var(--laranja-escuro) 100%);
-    --destaque: #FFD700;
     --branco: #FFFFFF;
     --verde: #2E5E4E;
     --azul: #40C4C6;
-    --beje: #F5E6D3;
-    --marrom: #8D6E63;
+    --preto: #1A1A1A;
+    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    --gradient-card: linear-gradient(145deg, #ffffff 0%, #f8f8f8 100%);
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 3rem;
+    --space-xl: 4rem;
 }
 
 /* Estilos gerais para o corpo da página */
@@ -27,9 +31,9 @@ body {
     /* Altura da linha */
     background-color: var(--branco);
     /* Fundo branco */
-    color: var(--cinza-escuro);
+    color: var(--preto);
     /* Texto cinza escuro */
-    font-size: 16px;
+    font-size: 1.1rem;
     /* Tamanho base da fonte */
     opacity: 0;
     animation: fadeIn 0.5s ease-in forwards;
@@ -47,21 +51,26 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'Merriweather', serif;
-    /* Fonte para títulos */
+    color: var(--verde);
+    line-height: 1.3;
 }
 
 h1 {
-    font-size: 2.8rem
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 
 h2 {
-    font-size: 2.2rem
+    font-size: 2.2rem;
+    font-weight: 600;
 }
 
 h3 {
-    font-size: 1.8rem
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 /* Container da imagem */
@@ -235,25 +244,28 @@ header h1 {
     /* Espaçamento superior */
 }
 
-/* Botões gerais */
+
+
+/* BUTTON SYSTEM */
 .btn {
     display: inline-block;
-    color: var(--branco);
+    padding: 12px 28px;
+    background: var(--gradient-primary);
+    color: var(--preto);
+    border-radius: 50px;
+    font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
-    letter-spacing: 0.5px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 97, 23, 0.3);
     position: relative;
     overflow: hidden;
-    background: var(--degrade-laranja);
-    border-radius: 30px;
-    padding: 12px 28px;
-    font-weight: 600;
 }
 
 .btn::after {
-    content: "";
+    content: '';
     position: absolute;
     top: -50%;
     left: -50%;
@@ -261,11 +273,27 @@ header h1 {
     height: 200%;
     background: rgba(255, 255, 255, 0.1);
     transform: rotate(45deg);
-    transition: 0.3s;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 97, 23, 0.4);
 }
 
 .btn:hover::after {
     left: 50%;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-sm {
+    padding: 8px 20px;
+    font-size: 0.9rem;
 }
 
 /* Estilo dos ícones */
