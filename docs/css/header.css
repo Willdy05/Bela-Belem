@@ -1,3 +1,6 @@
+/* Corrige o caminho das imagens e do CSS para uso em subdiretórios */
+@import url('../css/header.css');
+
 #main-header.hidden {
     transform: translateY(-100%);
     /* Esconder o header */
