@@ -2,12 +2,13 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <base href="https://willdy05.github.io/Bela-Belem/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regulamento de Passeios Turísticos - Bela Belém</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.comcss2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Estilos específicos para a página de regulamentos */
         .regulamento-container {
@@ -190,7 +191,7 @@
 
     <script>
         // Carrega o cabeçalho
-        fetch('/includes/header.html')
+        fetch('includes/header.html')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Erro ao carregar o header: ${response.status} ${response.statusText}`);
@@ -232,7 +233,7 @@
             });
 
         // Carrega o rodapé
-        fetch('/includes/footer.html')
+        fetch('includes/footer.html')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Erro ao carregar o footer: ${response.status} ${response.statusText}`);
