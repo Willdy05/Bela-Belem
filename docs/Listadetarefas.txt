@@ -1,0 +1,60 @@
+1 - Alterar o título da seção "Principais Destinos" para "Pacotes"
+    - Atualizar o texto do título na página principal (index.html).
+    - Certificar-se de que todos os links e referências estejam consistentes.
+
+2 - Adicionar "Pacotes" ao menu do header
+    - Incluir um item "Pacotes" no menu de navegação.
+    - Melhorar a animação do botão/menu em telas de celular para maior usabilidade.
+    - Testar responsividade após as alterações.
+
+3 - Reordenar os pacotes na seguinte sequência:
+    1. City tour 
+    2. Ilha do Combu 
+    3. Ilha do Combu Executivo 
+    4. Super Combu & demais ilhas 
+    5. Ilha do Mosqueiro 
+    6. Ilha do Marajó 
+    7. Ilha de Cotijuba 
+    8. Ilha dos Papagaios 
+    9. Praia de Salinas 
+    10. Ver o Boto em Mocajuba 
+    11. Praia de Ajuruteua 
+    12. Ilha de Algodoal
+    - Ajustar a ordem dos objetos no arquivo de dados dos pacotes (js/data.js).
+
+4 - Atualizar o formulário de contato
+    - Mensagem de agradecimento: "A Bela Belém Operadora Turística agradece seu contato😀"
+    - Solicitar as seguintes informações:
+        • Nome do cliente
+        • Hotel/local de hospedagem e número do quarto
+        • Número de pessoas do grupo ou se está sozinho(a)
+        • Destinos de interesse
+        • Datas disponíveis para passeio(s)
+        • Detalhes adicionais relevantes
+        • Nome do colega que indicou no hotel
+    - Garantir clareza e campos obrigatórios no formulário.
+
+5 - Novo modelo para reservar: "Consulte e reserve por WhatsApp"
+    - Adicionar botão ou link direto para WhatsApp nas páginas de pacotes e contato.
+    - Incluir instruções claras para o usuário.
+
+6 - Bela Belém Operadora Turística: buscar a fonte da logo
+    - Identificar a fonte utilizada na logo para padronização visual.
+    - Documentar a fonte para uso futuro.
+
+7 - Remover redundâncias desnecessárias nos regulamentos
+    - Revisar textos de regulamentos e eliminar repetições.
+    - Garantir clareza e objetividade.
+
+8 - Reformular CSS (padronizar fontes e tamanhos) e horizontalizar o feed
+    - Definir fontes e tamanhos padrão para títulos, textos e botões.
+    - Ajustar o layout do feed para exibição horizontal, se aplicável.
+    - Testar em diferentes dispositivos.
+
+9 - Adicionar novas imagens para os pacotes
+    - Selecionar e otimizar imagens representativas para cada pacote.
+    - Atualizar referências nos arquivos de dados e páginas.
+
+10 - Adicionar ícones característicos do site antigo
+    - Identificar ícones marcantes do layout anterior.
+    - Integrar esses ícones ao novo design, mantendo a identidade visual.
